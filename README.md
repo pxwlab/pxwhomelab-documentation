@@ -37,9 +37,9 @@ Technology and network stack brief overview:
 homelab/
 - [README.md](README.md)                        ← You are here
 - network/[opnsense-setup.md](network/opnsense-setup.md)   ← Firewall rules, VLANs, DNS config
-- servers/[ubuntu-vpn.md](servers/ubuntu-vpn.md)           ← VPN server setup walkthrough
-- virtualization/[vsphere-overview.md](virtualization/vsphere-overview.md) ← VM inventory and vSphere config
-- diagrams/network-topology.png
+- servers/[ubuntu-vpn.md](servers/ubuntu-vpn.md)           ← VPN server setup walkthrough **WIP**
+- virtualization/[vsphere-overview.md](virtualization/vsphere-overview.md) ← VM inventory and vSphere config **WIP**
+- diagrams/network-topology.png **WIP**
 
 
 ## ✅ Skills Demonstrated
