@@ -33,7 +33,7 @@ Technology and network stack brief overview:
 <!-- ![Network Diagram](diagrams/network-topology.png) -->
 
 ## 📁 Repository Structure
-```
+
 homelab/
 ├── [README.md](README.md)                        ← You are here
 ├── network/
@@ -44,7 +44,7 @@ homelab/
 │   └── [vsphere-overview.md](virtualization/vsphere-overview.md) ← VM inventory and vSphere config
 └── diagrams/
     └── network-topology.png
-```
+
 
 ## ✅ Skills Demonstrated
 - Hypervisor setup and virtual machine provisioning (VMware vSphere)
