@@ -62,6 +62,7 @@ homelab/
 - [ ] Configure automated backups for VMs
 - [ ] Deploy VLANs for an IoT test environment and network segmentation
 - [ ] Add IDS/IPS rules to OPNsense
+- [ ] Set up a NAS
 
 ## 🧠 Lessons Learned
 - VMware vSphere NIC configuration: Configured two network adapters in vSphere — an onboard NIC for LAN and a USB NIC adapter for WAN — and assigned -  them as virtual interfaces for OPNsense to handle routing and firewall duties.
