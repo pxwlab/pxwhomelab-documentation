@@ -33,7 +33,7 @@ Technology and network stack brief overview:
 <!-- ![Network Diagram](diagrams/network-topology.png) -->
 
 ## 📁 Repository Structure
-
+```
 homelab/
 ├── [README.md](README.md)                        ← You are here
 ├── network/
