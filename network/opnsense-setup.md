@@ -1,3 +1,30 @@
+# OPNsense Firewall & Router Setup
+
+## Overview
+OPNsense serves as the primary router and firewall for the homelab, running as a
+virtual machine on VMware vSphere. It handles all LAN/WAN routing, DHCP, DNS,
+and firewall rules including port forwarding for the VPN server.
+
+---
+
+## Environment
+
+| Detail | Value |
+|---|---|
+| OPNsense Version | Last updated March 2026 |
+| Hypervisor | VMware vSphere (thin client) |
+| LAN Interface | vmx0 (onboard NIC) |
+| WAN Interface | vmx1 (USB NIC adapter) |
+| LAN Subnet | 10.10.10.0/24 |
+| OPNsense LAN IP | 10.10.10.1 |
+
+---
+
+## Network Path
+Internet → USB NIC (WAN/vmx1) → vSphere → OPNsense VM
+→ vSwitch → Onboard NIC (LAN/vmx0) → Physical Switch
+→ TP-Link AP (wireless) / Ubuntu Server (via vSwitch) / LAN devices
+
 ---
 
 ## Interface Assignment
