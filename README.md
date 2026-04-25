@@ -48,22 +48,27 @@ homelab/
 
 ## ✅ Skills Demonstrated
 - Hypervisor setup and virtual machine provisioning (VMware vSphere)
-- Firewall configuration and network segmentation (OPNsense)
+- Physical and virtual network adapter configuration for WAN/LAN separation
+- Firewall configuration, routing, and DHCP management (OPNsense)
 - Linux server administration (Ubuntu Server 22.04)
-- VPN deployment and remote access configuration
+- VPN deployment using OpenConnect over TCP 443 with SSL/TLS certificates (Let's Encrypt)
+- Cloud VPS provisioning and configuration (Linode)
+- Network traffic obfuscation and deep packet inspection evasion
+- Smart home automation and device integration (Home Assistant OS)
 - Documentation and technical writing
 
 ## 🔭 In Progress / Future Plans
 - [ ] Set up a SIEM (e.g. Wazuh or Splunk) for log monitoring
 - [ ] Configure automated backups for VMs
-- [ ] Deploy a VLAN for an IoT test environment
+- [ ] Deploy VLANs for an IoT test environment and network segmentation
 - [ ] Add IDS/IPS rules to OPNsense
 
 ## 🧠 Lessons Learned
-- **OPNsense initial config:** Ran into a routing loop during first setup.
-  Resolved by correcting the WAN/LAN interface assignments in the console.
-- **VPN split tunneling:** Configured split-tunnel so only lab traffic
-  routes through VPN, keeping personal browsing separate.
+- VMware vSphere NIC configuration: Configured two network adapters in vSphere — an onboard NIC for LAN and a USB NIC adapter for WAN — and assigned -  them as virtual interfaces for OPNsense to handle routing and firewall duties.
+- OPNsense startup/connectivity issue: After rebooting vSphere, OPNsense was not set to auto-start, leaving the network without DHCP. My PC received an APIPA address and lost access to the management subnet. Resolved by manually setting a static IP on my PC to match the correct subnet and reconnecting to vSphere, then correcting OPNsense's startup behavior.
+- OpenConnect VPN — Home Lab: Deployed an OpenConnect VPN server on Ubuntu Server 22.04, configured to run on TCP 443 to disguise traffic as HTTPS and bypass deep packet inspection. Obtained a trusted SSL certificate via Let's Encrypt/Certbot. Port forwarding was configured on OPNsense to route inbound traffic to the VPN server.
+- OpenConnect VPN — Cloud VPS (Linode): Provisioned and configured a separate Ubuntu Server instance on a Linode VPS with the same OpenConnect setup, specifically to bypass the Great Firewall of China and maintain secure remote access while overseas.
+- LAN design and DHCP: Configured OPNsense as the DHCP server for my preferred subnet with a defined lease range, and assigned OPNsense itself a static IP. All VMs and devices sit on this subnet.
 
 ---
-*Built and maintained by [Your Name] | Last updated: [Month Year]*
+*Built and maintained by Edward Pan | LinkedIn: linkedin.com/in/edwardxpan/ | Last updated: April 2026*
